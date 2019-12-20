@@ -29,5 +29,3 @@ Not working:
 - Fingerprint reader (recognised but can't be used)
 - Bluetooth (Not working well. Magic Mouse lags)
 - Sleep / Wake (Seems to work but battery drains)
-
-NOTE: If you have a compatable NVMe SSD remove SSDT_NVMe-Pcc.aml from /CLOVER/ACPI/Patched
