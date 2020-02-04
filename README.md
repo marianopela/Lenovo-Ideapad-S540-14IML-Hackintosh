@@ -3,7 +3,7 @@
 | Specifications | Details |
 |:-: |:-: |
 | Processor | Intel Core i5-10210U  |
-| RAM | 8gb DDR4 2400MHz (4gb soldiered on board) |
+| RAM | 8gb DDR4 2400MHz (4gb soldered on board) |
 | SSD | 500GB NVMe SSD |
 | Graphics Card | Intel HD Graphics |
 | Monitor | 14 inch 1920x1080 |
@@ -14,18 +14,17 @@
 
 #### Current status:
 Working:
-- Intel Graphics (HDMI not tested)
+- Audio
+- Intel Graphics (HDMI not working)
 - Keyboard
 - Camera
 - USBs
 - Brightness adjustment
-- Battery managment
+- Battery managment, Sleep/Wake
 - Power managment
+- WiFi/BT - changed with DW1820a
 
 Not working:
-- Sound
 - Touchpad (VoodooI2C doesn't support CometLake I2C Controllers as of now)
 - Card Reader
-- Fingerprint reader (recognised but can't be used)
-- Bluetooth (Not working well. Magic Mouse lags)
-- Sleep / Wake (Seems to work but battery drains)
+- Fingerprint reader 
