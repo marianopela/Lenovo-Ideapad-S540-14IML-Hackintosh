@@ -48,7 +48,7 @@
 			<string>VoodooGPIOCannonLakeH</string>
 			<key>IONameMatch</key>
 			<array>
-				<string>INT3450</string>
+				<string>INT34BB</string>
 			</array>
 			<key>IOProviderClass</key>
 			<string>IOService</string>
@@ -74,7 +74,7 @@
 			<string>VoodooGPIOSunrisePointH</string>
 			<key>IONameMatch</key>
 			<array>
-				<string>INT345D</string>
+				<string>INT34BB</string>
 			</array>
 			<key>IOProviderClass</key>
 			<string>IOService</string>
@@ -87,7 +87,7 @@
 			<string>VoodooGPIOSunrisePointLP</string>
 			<key>IONameMatch</key>
 			<array>
-				<string>INT344B</string>
+				<string>INT34BB</string>
 			</array>
 			<key>IOProviderClass</key>
 			<string>IOService</string>
