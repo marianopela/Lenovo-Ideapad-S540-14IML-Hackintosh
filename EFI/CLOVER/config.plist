@@ -155,7 +155,7 @@
 			<key>AFGLowPowerState</key>
 			<true/>
 			<key>Inject</key>
-			<integer>15</integer>
+			<string>No</string>
 			<key>ResetHDA</key>
 			<true/>
 		</dict>

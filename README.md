@@ -15,6 +15,7 @@
 #### Current status:
 Working:
 - Audio
+- Touchpad (thanks to phi54321 and @startpenghubingzhou)
 - Intel Graphics (HDMI not working)
 - Keyboard
 - Camera
@@ -25,6 +26,5 @@ Working:
 - WiFi/BT - changed with DW1820a
 
 Not working:
-- Touchpad (VoodooI2C doesn't support CometLake I2C Controllers as of now)
 - Card Reader
 - Fingerprint reader 
