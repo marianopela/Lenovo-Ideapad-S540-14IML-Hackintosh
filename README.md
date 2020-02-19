@@ -21,8 +21,8 @@ Working:
 - Camera
 - USBs
 - Brightness adjustment
-- Battery managment, Sleep/Wake
-- Power managment
+- Battery managment
+- Power managment, Sleep/Wake
 - WiFi/BT - changed with DW1820a
 
 Not working:
