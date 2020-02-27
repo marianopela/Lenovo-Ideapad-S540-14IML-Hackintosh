@@ -14,6 +14,8 @@
 			<false/>
 			<key>Fixes</key>
 			<dict>
+				<key>AddHDMI</key>
+				<false/>
 				<key>Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
 				<key>FixHPET</key>
@@ -122,6 +124,8 @@
 			<false/>
 			<key>Generate</key>
 			<dict>
+				<key>APSN</key>
+				<true/>
 				<key>PluginType</key>
 				<true/>
 			</dict>
@@ -134,7 +138,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>dart=0 -v alcid=15 -lilubetaall -wegdbg brcmfx-country=IT</string>
+		<string>dart=0 brcmfx-country=IT</string>
 		<key>DefaultVolume</key>
 		<string>macOS</string>
 		<key>Legacy</key>
@@ -150,6 +154,58 @@
 	<string>This file is for 10.14.x with native CoffeeLake support</string>
 	<key>Devices</key>
 	<dict>
+		<key>Arbitrary</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>SDXC reader - RP16</string>
+				<key>CustomProperties</key>
+				<array>
+					<dict>
+						<key>Disabled</key>
+						<false/>
+						<key>Key</key>
+						<string>device_type</string>
+						<key>Value</key>
+						<string>Media controller</string>
+					</dict>
+					<dict>
+						<key>Disabled</key>
+						<false/>
+						<key>Key</key>
+						<string>model</string>
+						<key>Value</key>
+						<string>O2 Micro SD card reader</string>
+					</dict>
+					<dict>
+						<key>Disabled</key>
+						<false/>
+						<key>Key</key>
+						<string>name</string>
+						<key>Value</key>
+						<string>SD/MMC Card Reader</string>
+					</dict>
+					<dict>
+						<key>Disabled</key>
+						<false/>
+						<key>Key</key>
+						<string>compatible</string>
+						<key>Value</key>
+						<string>pci14e4,16bc</string>
+					</dict>
+					<dict>
+						<key>Disabled</key>
+						<false/>
+						<key>Key</key>
+						<string>subsystem-vendor-id</string>
+						<key>Value</key>
+						<data>axAAAA==</data>
+					</dict>
+				</array>
+				<key>PciAddr</key>
+				<string>03:00:00</string>
+			</dict>
+		</array>
 		<key>Audio</key>
 		<dict>
 			<key>AFGLowPowerState</key>
@@ -182,7 +238,9 @@
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>AACbPg==</data>
+				<data>CQClPg==</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
 				<key>device-id</key>
 				<data>mz4AAA==</data>
 				<key>disable-external-gpu</key>
@@ -207,6 +265,8 @@
 				<data>AQAAAA==</data>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
+				<key>model</key>
+				<string>Intel UHD Graphics 630 (Mobile)</string>
 			</dict>
 		</dict>
 		<key>USB</key>
@@ -355,17 +415,17 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>11/14/2019</string>
+		<string>01/05/2020</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP152.88Z.F000.B00.1911142159</string>
+		<string>MBP151.88Z.F000.B00.2001052203</string>
 		<key>Board-ID</key>
-		<string>Mac-827FB448E656EC26</string>
+		<string>Mac-937A206F2EE63C01</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02908100GUJH4RFB</string>
+		<string>C02818301QXJP4FJC</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -377,7 +437,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>1037.60.58.0.0</string>
+		<string>1037.80.41.0.0</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>FirmwareFeatures</key>
@@ -393,11 +453,11 @@
 		<key>PlatformFeature</key>
 		<string>0x02</string>
 		<key>ProductName</key>
-		<string>MacBookPro15,2</string>
+		<string>MacBookPro15,1</string>
 		<key>SerialNumber</key>
-		<string>C02Y907SJHCD</string>
+		<string>C02WN0BRKGYG</string>
 		<key>SmUUID</key>
-		<string>12DAABA7-FCC2-47ED-9D25-8C69E1E503E3</string>
+		<string>AF3EB382-9864-4392-B30B-597322860339</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>

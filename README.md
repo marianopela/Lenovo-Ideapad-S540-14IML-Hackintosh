@@ -19,6 +19,7 @@ Working:
 - Intel Graphics (HDMI not working)
 - Keyboard
 - Camera
+- Card Reader
 - USBs
 - Brightness adjustment
 - Battery managment
@@ -26,5 +27,4 @@ Working:
 - WiFi/BT - changed with DW1820a
 
 Not working:
-- Card Reader
 - Fingerprint reader 
