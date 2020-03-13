@@ -10,8 +10,6 @@
 		<string>Disable other forms of CPU PM due to SSDT/Generate/PluginType=true</string>
 		<key>DSDT</key>
 		<dict>
-			<key>DropOEM_DSM</key>
-			<false/>
 			<key>Fixes</key>
 			<dict>
 				<key>AddHDMI</key>
@@ -75,7 +73,7 @@
 					<key>Comment</key>
 					<string>Rename XHCI to XHC (USB)</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>WEhDSQ==</data>
 					<key>Replace</key>
@@ -85,39 +83,83 @@
 					<key>Comment</key>
 					<string>Rename H_EC to EC (USB Power)</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>SF9FQw==</data>
 					<key>Replace</key>
 					<data>RUNfXw==</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename _CRS to XCRS (TPAD)</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>X0NSUw==</data>
+					<key>Replace</key>
+					<data>WENSUw==</data>
+					<key>TgtBridge</key>
+					<data>VFBBRA==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename _STA to XSTA (GPI0)</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>X1NUQQ==</data>
+					<key>Replace</key>
+					<data>WFNUQQ==</data>
+					<key>TgtBridge</key>
+					<data>R1BJMA==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename USTP to XSTP</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>VVNUUAg=</data>
+					<key>Replace</key>
+					<data>WFNUUAg=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change GFX0 to IGPU</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>R0ZYMA==</data>
+					<key>Replace</key>
+					<data>SUdQVQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change SAT0 to SATA</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>U0FUMA==</data>
+					<key>Replace</key>
+					<data>U0FUQQ==</data>
+				</dict>
 			</array>
 		</dict>
-		<key>DisabledAML</key>
-		<array>
-			<string>SSDT.aml</string>
-			<string>SSDT-XCPM.aml</string>
-			<string>SSDT-PluginType1.aml</string>
-		</array>
-		<key>DropTables</key>
-		<array>
-			<dict>
-				<key>Signature</key>
-				<string>#MCFG</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>DMAR</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>xh_rvp10</string>
-			</dict>
-		</array>
 		<key>FixHeaders</key>
 		<true/>
+		<key>FixMCFG</key>
+		<true/>
+		<key>HaltEnabler</key>
+		<true/>
+		<key>RenameDevices</key>
+		<dict>
+			<key>_SB.PCI0.RP09.PXSX</key>
+			<string>ANS0</string>
+			<key>_SB.PCI0.RP15.PXSX</key>
+			<string>ARPT</string>
+			<key>_SB.PCI0.RP16.PXSX</key>
+			<string>SDCR</string>
+		</dict>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
@@ -125,10 +167,12 @@
 			<key>Generate</key>
 			<dict>
 				<key>APSN</key>
-				<true/>
+				<false/>
 				<key>PluginType</key>
 				<true/>
 			</dict>
+			<key>NoDynamicExtract</key>
+			<true/>
 			<key>NoOemTableId</key>
 			<false/>
 		</dict>
@@ -138,7 +182,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>dart=0 brcmfx-country=IT</string>
+		<string>dart=0 brcmfx-country=IT -v -disablegfxfirmware </string>
 		<key>DefaultVolume</key>
 		<string>macOS</string>
 		<key>Legacy</key>
@@ -149,6 +193,8 @@
 		<false/>
 		<key>Timeout</key>
 		<integer>5</integer>
+		<key>XMPDetection</key>
+		<false/>
 	</dict>
 	<key>Comment</key>
 	<string>This file is for 10.14.x with native CoffeeLake support</string>
@@ -238,9 +284,7 @@
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>CQClPg==</data>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
+				<data>AACbPg==</data>
 				<key>device-id</key>
 				<data>mz4AAA==</data>
 				<key>disable-external-gpu</key>
@@ -275,8 +319,10 @@
 			<true/>
 			<key>FixOwnership</key>
 			<true/>
+			<key>HighCurrent</key>
+			<true/>
 			<key>Inject</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>UseIntelHDMI</key>
 		<false/>
@@ -299,7 +345,7 @@
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>embedded</string>
+		<string>ios7</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -331,7 +377,7 @@
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
 		</array>
 		<key>KernelLapic</key>
-		<true/>
+		<false/>
 		<key>KernelPm</key>
 		<true/>
 		<key>KernelToPatch</key>
@@ -340,7 +386,7 @@
 				<key>Comment</key>
 				<string>MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>ILniAAAADzA=</data>
 				<key>Replace</key>
@@ -350,7 +396,7 @@
 				<key>Comment</key>
 				<string>Disable panic kext logging on 10.13 release kernel (credit vit9696)</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>igKEwHRE</data>
 				<key>MatchOS</key>
@@ -362,7 +408,7 @@
 				<key>Comment</key>
 				<string>Disable panic kext logging on 10.14 release kernel (credit vit9696)</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>igKEwHRC</data>
 				<key>MatchOS</key>
@@ -425,7 +471,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02818301QXJP4FJC</string>
+		<string>C02837701GUJP4FFB</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -455,9 +501,9 @@
 		<key>ProductName</key>
 		<string>MacBookPro15,1</string>
 		<key>SerialNumber</key>
-		<string>C02WN0BRKGYG</string>
+		<string>C02XD5Z6KGYG</string>
 		<key>SmUUID</key>
-		<string>AF3EB382-9864-4392-B30B-597322860339</string>
+		<string>C4FD2A0E-20D7-449F-B72A-FF63C7BA2C25</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
@@ -467,8 +513,10 @@
 		<string>E9208D7D-26EC-4FA7-AF3E-F08F94825571</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
-		<key>NoCaches</key>
+		<key>InjectSystemID</key>
 		<true/>
+		<key>NoCaches</key>
+		<false/>
 	</dict>
 </dict>
 </plist>
