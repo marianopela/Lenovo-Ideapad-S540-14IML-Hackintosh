@@ -8,7 +8,7 @@
 | Graphics Card | Intel HD Graphics |
 | Monitor | 14 inch 1920x1080 |
 | Sound Card | Conexant CX8070 |
-| Card reader |  |
+| Card reader | working |
 | Finger print reader | |
 | Network Card | Intel (replaced with DW1820A) |
 
