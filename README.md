@@ -15,17 +15,19 @@
 #### Current status:
 Working:
 - Audio
-- Touchpad (thanks to phi54321 and @startpenghubingzhou)
-- Intel Graphics (HDMI not working)
+- Touchpad (thanks to @phi54321 and @startpenghubingzhou)
+- Intel Graphics (HDMI working)
 - Keyboard
 - Camera
 - Card Reader
 - USBs
 - Brightness adjustment
 - Battery managment
-- Power managment, Sleep/Wake
+- Power managment (under 2 watts consumption at idle), Sleep/Wake
 - WiFi/BT - changed with DW1820a
 
 Not working:
 - HDMI
 - Fingerprint reader 
+
+Thanks to https://github.com/Hasodikis for helping and testing
