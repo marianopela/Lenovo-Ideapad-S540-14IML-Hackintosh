@@ -27,7 +27,6 @@ Working:
 - WiFi/BT - changed with DW1820a
 
 Not working:
-- HDMI
 - Fingerprint reader 
 
 Thanks to https://github.com/Hasodikis for helping and testing
