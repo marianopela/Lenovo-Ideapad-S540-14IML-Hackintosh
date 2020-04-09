@@ -23,7 +23,8 @@ Working:
 - USBs
 - Brightness adjustment
 - Battery managment
-- Power managment (under 2 watts consumption at idle), Sleep/Wake
+- Power managment (Native Power Management via CFG Lock)
+- Sleep/Wake
 - WiFi/BT - changed with DW1820a
 
 Not working:
