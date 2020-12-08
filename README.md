@@ -16,7 +16,7 @@
 Working:
 - Audio
 - Touchpad
-- Intel Graphics (HDMI working)
+- Intel Graphics (~~HDMI working~~)
 - Keyboard
 - Camera
 - Card Reader
