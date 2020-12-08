@@ -15,7 +15,7 @@
 #### Current status:
 Working:
 - Audio
-- Touchpad (thanks to @phi54321 and @startpenghubingzhou)
+- Touchpad
 - Intel Graphics (HDMI working)
 - Keyboard
 - Camera
