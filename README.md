@@ -1,5 +1,3 @@
-# If my work helped you, consider [buying me a coffee](paypal.me/marianopela)
-
 # Lenovo-Ideapad-S540-14IML-Hackintosh
 
 | Specifications | Details |
